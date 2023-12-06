@@ -12,8 +12,8 @@ You are encouraged to use the provided naming convention for ease of review.
 // INSERT YOUR CODE HERE
 
 
-let modelName = "XYZ"
-let duration = 0
+let modelName = "XYZ";
+let duration = 0;
 
 
 /****************** helper function ******************/
@@ -29,13 +29,13 @@ let duration = 0
 // INSERT YOUR CODE HERE
 
 function recalculate(duration) {
-    const cost = document.getElementById("calculated-cost")
+    const cost = document.getElementById("calculated-cost");
     if (modelName === "XYZ") {
         let newCost = duration * 100;
-        document.getElementById("calculated-cost").innerHTML = newCost;
+        cost.innerHTML = newCost;
     } else if (modelName === "CPRG") {
         let newCost = duration * 213;
-        document.getElementById("calculated-cost").innerHTML = newCost;
+        cost.innerHTML = newCost;
     }
 
 }
@@ -57,17 +57,17 @@ function recalculate(duration) {
 
 // INSERT YOUR CODE HERE
 
-const modelButton = document.getElementById("model-button")
+const modelButton = document.getElementById("model-button");
 function changeModel() {
-    const modelText = document.getElementById("model-text")
+    const modelText = document.getElementById("model-text");
     if (modelName === "XYZ") {
-        modelName = "CPRG"
-        modelText.innerHTML = "Model CPRG"
-        recalculate(duration)
+        modelName = "CPRG";
+        modelText.innerHTML = "Model CPRG";
+        recalculate(duration);
     }   else if (modelName === "CPRG") {
-        modelName = "XYZ"
-        modelText.innerHTML = "Model XYZ"
-        recalculate(duration)
+        modelName = "XYZ";
+        modelText.innerHTML = "Model XYZ";
+        recalculate(duration);
     }
 }
 
@@ -87,11 +87,11 @@ modelButton.addEventListener("click", changeModel);
 */
 
 // INSERT YOUR CODE HERE
-const durationButton = document.getElementById("duration-button")
+const durationButton = document.getElementById("duration-button");
 function changeDuration() {
-    duration = prompt("Duration? ")
+    duration = prompt("Duration?");
     document.getElementById("duration-text").innerHTML = duration;
-    recalculate(duration)
+    recalculate(duration);
     
 }
 
